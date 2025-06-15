@@ -2,7 +2,7 @@
 const Head = () => {
     return (
         <div>
-            <h1>Welcome to My Website. I'm header</h1>
+            <h1>head</h1>
         </div>
     )
 }

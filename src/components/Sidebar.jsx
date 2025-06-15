@@ -2,7 +2,7 @@
 const Sidebar = () => {
     return (
         <div>
-            <h1>I am sidebar of the body</h1>
+            <h1>Sidebar</h1>
         </div>
     )
 }

@@ -1,8 +1,10 @@
-
+import ButtonList from "./ButtonList";
+import VideosContainer from "./VideosContainer";
 const MainContainer = () => {
     return (
         <div>
-            <h2>I am the main container of the Body</h2>
+            <ButtonList />
+            <VideosContainer />
         </div>
     )
 }

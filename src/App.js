@@ -8,7 +8,6 @@ function App() {
     <div>
       <Head />
       <Body />
-
     </div>
   );
 }
