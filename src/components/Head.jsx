@@ -1,11 +1,21 @@
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaUser } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import {toggleMenu} from "../utils/appSlice";
 
 const Head = () => {
+    
+    const dispatch = useDispatch();
+    const toggleMenuHandeler = () => {
+        dispatch(toggleMenu());
+    }
+    
     return (
         <div className="grid grid-flow-col m-2 p-5 shadow-lg text-center items-center bg-white">
-            <div className="flex col-span-1">
-                <GiHamburgerMenu  className="h-8"/>
+            <div className="flex col-span-1 cursor-pointer">
+                <GiHamburgerMenu  className="h-8 "
+                onClick={()=>toggleMenuHandeler()}
+                />
                 <img src="https://img.favpng.com/24/10/0/youtube-premium-logo-png-favpng-gydaJGF28XSHPNpyCsymNv8RM.jpg" alt="yt-logo" 
                 className="h-8 mx-2" />
             </div>
