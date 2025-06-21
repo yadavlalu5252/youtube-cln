@@ -60,3 +60,14 @@ export default Body;
 - RouterProvider will load body and outlet is inside body container
 - on body.jsx outlet is created
 - on <Outlet /> children will be loaded according to route
+
+# Higher order component
+
+- It is a function that takes the component and return a new component
+
+# Debouncing
+- Difference between 2 keystroke is very less then decline the API call
+
+- Debouncing with 200ms
+  - Difference between 2 keystroke <200ms then Decline the api call
+  - >200ms then make the api call
