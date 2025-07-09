@@ -41,3 +41,32 @@ export function generateRandomMessage() {
   const randomIndex = Math.floor(Math.random() * messages.length);
  return messages[randomIndex];
 }
+
+
+
+function isPrime(num) {
+  if (num <= 1) {
+    return false;
+  }
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false; // If divisible, it's not prime
+    }
+  }
+  return true; // If no divisors found, it's prime
+}
+
+
+export function findNthPrime(n) {
+   let count = 0; 
+  let num = 2;  
+  while (count < n) {
+    if (isPrime(num)) {
+      count++; 
+    }
+    num++; 
+  }
+
+  return num - 1; 
+}
+

@@ -26,27 +26,36 @@ const LiveChat = () => {
 
   return (
     <>
-    <div className="ml-2 p-2 border border-black w-full h-[360px] bg-slate-100 overflow-y-scroll flex flex-col-reverse">
-      <div>{chatMessage.map((c, index) => (
-        <ChatMessage key={index} name={c.name} message={c.message} />
-      ))}
+      <div className="ml-2 p-2 border border-black w-full h-[360px] bg-slate-100 overflow-y-scroll flex flex-col-reverse">
+        <div>
+          {chatMessage.map((c, index) => (
+            <ChatMessage key={index} name={c.name} message={c.message} />
+          ))}
+        </div>
       </div>
-    </div>
-    <form className="w-full p-2 ml-2 border border-black" onSubmit={(e)=> {
-        e.preventDefault();
-        dispatch(addMessage({
-            name: "Lalu Yadav",
-            message: liveMessage
-        }));
-        setLiveMessage("");
-    }}>
-        <input type="text" className="w-3/4 border border-slate-600" 
-        value={liveMessage}
-        onChange={(e)=> {
+      <form
+        className="w-full p-2 ml-2 border border-black"
+        onSubmit={(e) => {
+          e.preventDefault();
+          dispatch(
+            addMessage({
+              name: "Lalu Yadav",
+              message: liveMessage,
+            })
+          );
+          setLiveMessage("");
+        }}
+      >
+        <input
+          type="text"
+          className="w-3/4 border border-slate-600"
+          value={liveMessage}
+          onChange={(e) => {
             setLiveMessage(e.target.value);
-        }}/>
+          }}
+        />
         <button className="px-2 mx-2 bg-green-100">Send</button>
-    </form>
+      </form>
     </>
   );
 };
